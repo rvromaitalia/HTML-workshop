@@ -1,0 +1,67 @@
+
+#homepage{
+  color: rgb(102, 107, 110);
+  background-color: red;
+}
+/* Page grid: header | main | footer */
+body {
+  margin: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows:auto 1fr auto;;
+  row-gap: 1rem;
+  background: #f7f7f8;
+  color: #222;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+/* Header bar + nav links */
+header {
+  background: #c40000;
+  text-align: center;
+  padding: 20px;
+ }
+header nav{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1 rem 1,25rem;
+}
+header a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  padding: 120px;
+}
+
+header a:focus-visible{
+  text-decoration: underline;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+/* Main: 2 columns with 2:1 ratio + gap */
+main{
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left twice as wide as right */
+  gap: 3rem;                      /* spacing between the two columns */
+  padding: 0 1rem;
+}
+
+section, aside{
+  background: #fff;
+  border: 1px solid #e7e7ea;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px ;
+}
+/* Footer bar */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 1rem 1.25rem;
+}
+
+/* for small screens*/
+@media (max-width: 700px) {
+  main { grid-template-columns: 1fr; }  /* stack */
+}
